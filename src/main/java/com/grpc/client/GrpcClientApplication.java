@@ -12,7 +12,7 @@ public class GrpcClientApplication {
 	public static void main(String[] args) { //
 		// SpringApplication.run(GrpcClientApplication.class, args);
 
-		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 8999).usePlaintext().build();
+		ManagedChannel channel = ManagedChannelBuilder.forAddress("localhost", 9090).usePlaintext().build();
 		UserServiceGrpc.UserServiceBlockingStub userServiceBlockingStub = UserServiceGrpc.newBlockingStub(channel);
 
 		UserDetails.UserResponse userResponse = userServiceBlockingStub
